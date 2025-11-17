@@ -1,0 +1,39 @@
+# Tic-Tac-Toe with Moving Pieces (Python Turtle)
+
+This project is a twist on classic Tic-Tac-Toe built using Python’s `turtle` module. Instead of permanently placing marks, each player may only have up to three tiles on the board at any time. When a player places a fourth mark, their oldest mark is automatically removed. This creates a more dynamic, strategy-based version of the original game.
+
+## How it Works
+
+The game opens a Turtle Graphics window and draws a standard 3x3 Tic-Tac-Toe grid. Player X goes first, followed by Player O, and the players alternate turns by clicking on the squares where they want to place their mark.
+
+Each click is converted into a board index, and the corresponding X or O is drawn in the center of that square. The game tracks the state of the board in a list of nine entries and uses another structure to keep track of the order of each player’s moves. When a player exceeds three active marks, the earliest one is removed from both the board state and the screen.
+
+After every move, the game checks for a winner using all possible winning combinations: rows, columns, and diagonals. If three X’s or three O’s align, a win message is displayed at the bottom of the screen and the game automatically resets after a short delay. If the board continues without a winner, the match simply goes on with pieces constantly entering and exiting based on the three-piece limit.
+
+## Controls and Gameplay
+
+To play, simply run the script and click inside any of the nine squares. Only empty squares can be selected. When you click a valid square, the current player’s mark is placed there and control switches to the other player.
+
+If a player already has three marks on the board, their oldest mark disappears when they place a new one. This forces both players to think not only about forming three in a row, but also about the order of their moves and how long each piece will remain on the board.
+
+The game ends immediately when one player forms a three-in-a-row pattern. A message such as “X wins! Resetting…” or “O wins! Resetting…” briefly appears, and then the board is cleared and the game starts again automatically.
+
+## Requirements
+
+This project uses only the Python standard library. To run it, you need:
+
+Python 3 installed on your system.  
+The built-in `turtle` module (included with most standard Python distributions).
+
+No additional packages are required.
+
+## How to Run
+
+Save the code in a file named, for example, `moving_tictactoe.py`.
+
+Open a terminal or command prompt in the directory containing the file.
+
+Run the script with:
+
+```bash
+python moving_tictactoe.py
